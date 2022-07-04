@@ -1,5 +1,17 @@
 ---
 
+- name: "Ansible | Print master_ip"
+  debug:
+    msg: "master_ip: {{master_ip}}"
+
+- name: "Ansible | Print ansible_user"
+  debug:
+    msg: "ansible_user: {{ansible_user}}"
+
+- name: "Ansible | Print a variable"
+  debug:
+    msg: "token: {{ hostvars[groups['master'][0]]['token'] }}"
+
 - name: Copy K3s service file
   template:
     src: "k3s.service.j2"
