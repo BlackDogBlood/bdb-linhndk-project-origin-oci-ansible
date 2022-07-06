@@ -1,6 +1,6 @@
 ---
 
-- name: "iptables http"
+- name: iptables allow http
   iptables:
     chain: INPUT
     protocol: tcp
